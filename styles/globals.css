@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dropdown {
+    @apply absolute top-full mt-3 w-full p-5 bg-[#00204a] text-white min-w-[210px] flex flex-col gap-2 justify-start items-start;
+  }
+  
+  .dropdown_link {
+    @apply text-sm font-inter text-white font-medium;
+  }
+
+  .h1gradient {
+    @apply bg-gradient-to-r from-blue-900 to-cyan-500 text-transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .icon {
+    vertical-align: bottom;
+  }
+
+ 
+  
