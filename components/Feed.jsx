@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-import PromptCard from "./PromptCard";
+import PromptCard from "./BlogCard";
 
 const PromptCardList = ({ data, handleTagClick }) => {
   return (

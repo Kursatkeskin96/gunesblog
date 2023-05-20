@@ -31,13 +31,13 @@ const Nav = () => {
               <Link href='/'>Home</Link>
             </div>
             <div>
-              <Link href='/'>Blog</Link>
+              <Link href='/blog'>Blog</Link>
             </div>
             <div>
               <Link href='/'>Kelime</Link>
             </div>
             <div>
-              <Link href='/'>Galeri</Link>
+              <Link href='/galeri'>Galeri</Link>
             </div>
             <div>
             <button type='button' onClick={signOut} className='outline_btn'>
