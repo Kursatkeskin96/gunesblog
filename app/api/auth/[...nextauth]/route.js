@@ -8,7 +8,7 @@ import bcrypt from 'bcrypt'
 
 const handler = NextAuth({
   pages: {
-    signIn: 'https://gunesozdemir.vercel.app/auth/signin',
+    signIn: 'auth/signin',
   },
   providers: [
     CredentialsProvider({
