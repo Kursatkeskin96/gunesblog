@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
 import styles from './styles.module.css';
-import Footer from "@/components/Footer";
 
 export default function Blogpage() {
   const { data: session, status } = useSession();
@@ -19,14 +18,13 @@ export default function Blogpage() {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const timestamp = Date.now();
-      const url = `https://gunesozdemir.vercel.app/api/blog?_=${timestamp}`;
-      const response = await fetch(url);
+      const response = await fetch('https://gunesozdemir.vercel.app/api/blog');
       const data = await response.json();
       setBlogs(data);
     };
-    fetchBlogs();
+      fetchBlogs();
   }, []);
+
   return (
     <div>
       <div className={styles.homebackground}>
