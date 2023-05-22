@@ -48,7 +48,7 @@ export default function Blogpage() {
        key={blog._id}
         title={blog.title}
         blog={blog}
-        cretor={blog.creator}
+        creator={blog.creator}
        />
       ))}
       </div>

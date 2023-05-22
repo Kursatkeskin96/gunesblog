@@ -1,15 +1,5 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
-import { useSession } from "next-auth/react";
-import { usePathname, useRouter } from "next/navigation";
 
 const BlogCard = ({ blog }) => {
-  const { data: session } = useSession();
-  const pathName = usePathname();
-  const router = useRouter();
-
     // Format the createdAt date
     const createdAtDate = new Date(blog.createdAt);
     const formattedDate = createdAtDate.toLocaleDateString("en-GB", {
