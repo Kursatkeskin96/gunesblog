@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import {RxHamburgerMenu} from 'react-icons/rx'
-import {AiOutlineHome} from 'react-icons/ai'
 
 const Nav = () => {
   const { data: session } = useSession();
@@ -21,27 +19,27 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className=' bg-[#00204a] h-14 text-white flex-between w-full mb-16 pt-3'>
+    <nav className='bg-[#00204a] h-14 text-white flex-between w-full pt-3'>
 
       {/* Desktop Navigation */}
       <div className='sm:flex hidden'>
         {session?.user ? (
           <div className='flex ml-auto mr-5 gap-3 md:gap-5'>
-            <div>
-              <Link href='/'>Home</Link>
+            <div className="p-1 hover:border-b-2 border-[#fdb44b] ">
+              <Link href='/'>Ana Sayfa</Link>
             </div>
-            <div>
+            <div className="p-1 hover:border-b-2 border-[#fdb44b] ">
               <Link href='/blog'>Blog</Link>
             </div>
-            <div>
-              <Link href='/'>Kelime</Link>
+            <div className="p-1 hover:border-b-2 border-[#fdb44b] ">
+              <Link href='/kelime'>Kelime</Link>
             </div>
-            <div>
+            <div className="p-1 hover:border-b-2 border-[#fdb44b] ">
               <Link href='/galeri'>Galeri</Link>
             </div>
-            <div>
+            <div className="bg-[#f59f26] p-1 rounded-md">
             <button type='button' onClick={signOut} className='outline_btn'>
-              Cikis Yap
+            Çıkış Yap
             </button>
             </div>
           </div>
@@ -50,14 +48,14 @@ const Nav = () => {
             {providers &&
               Object.values(providers).map((provider) => (
                 <div key={provider.name} className="flex ml-auto">
-                <div className="mx-5 justify-center items-center">
+                <div className="mx-5 justify-center items-center hover:border-b-2 border-[#fdb44b]">
                   <Link href="/">
-                    Home
+                    Ana Sayfa
                   </Link>
                 </div>
-                    <div className='mr-8'>
-                    <button type='button' onClick={signIn} className='outline_btn'>
-                      Giris Yap
+                    <div className='mr-8 hover:border-b-2 border-[#fdb44b]'>
+                    <button type='button' onClick={signIn}>
+                      Giriş Yap
                     </button>
                   </div>
                 </div>
@@ -118,7 +116,7 @@ const Nav = () => {
                   }}
                   className='dropdown_link'
                 >
-                  Cikis Yap
+                  Çıkış Yap
                 </button>
                 </div>
               </div>
@@ -129,15 +127,15 @@ const Nav = () => {
             {providers &&
               Object.values(providers).map((provider) => (
                 <div key={provider.name} className="flex justify-center items-center mx-auto">
-                <div className="mx-3">
+                <div className="mx-3 hover:border-b-2 border-[#fdb44b]">
                 <Link
                   href='/'
                   onClick={() => setToggleDropdown(false)}>
-                 Home
+                 Ana Sayfa
                 </Link>
                 </div>
                 
-                <div className="mx-3">
+                <div className="mx-3 hover:border-b-2 border-[#fdb44b]">
                 <button
                   type='button'
                   key={provider.name}
@@ -145,7 +143,7 @@ const Nav = () => {
                     signIn(provider.id);
                   }}
                 >
-                  Giris Yap
+                  Giriş Yap
                 </button>
                 </div>
                 </div>

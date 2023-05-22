@@ -21,8 +21,8 @@ export default function page() {
   return (
     <div>
         {session?.user ? ( 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-center max-w-6xl mx-auto">
-          <div className="max-w-[90%] p-4">
+          <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-center max-w-6xl mx-auto">
+          <div className="mt-8 max-w-[90%] p-4">
             <Image
             src={Gunes2}
             className="ml-auto rounded-md"
@@ -31,14 +31,12 @@ export default function page() {
             />
           </div>
           <div className= "p-4">
-          <h1 className="h1gradient mb-10 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">Gunesin dunyasina hos geldin </h1>
-          <p className="text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Bu internet sitesi Gunesin internetteki ani defteri olarak tasarlanmistir. {session.user.username}</p>
-          <p className="my-5 text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Bu site uzerinden Gunes'e ileride okuyabilecegi notlar yazabilir, ilk kemilerini ve ne anlama geldigini gosteren sozluge goz atabilir, Gunesin dogumundan beri her ay guncellenen foto galeride gezinebilirsiniz.</p>
-          <p className="text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Iceriklere erisim aile uyeleri ile sinirlandirilmistir. Devam etmek icin lutfen giris yapin</p>
-          <Link href='/auth/signin'>
-          <button  onClick={() => signOut()} className="bg-gradient-to-br from-[#fdb44b] to-yellow-300  hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 mt-10 flex justify-center mx-auto max-w-[50%] text-cetner items-center p-3 rounded-md text-white">Cikis Yap
-          </button>
-         </Link>
+          <h1 className="h1gradient mb-10 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">Güneş'in dünyasına hoş geldin.</h1>
+          <p className="text-lg text-gray-500 lg:text-lg dark:text-gray-400">Artık giriş yaptığına göre içeriklere erişebilirsin.</p>
+          <p className="my-5 text-lg text-gray-500 lg:text-lg dark:text-gray-400">Güneş'e ileride okuyacağı notları paylaşabilir, galeri sayfasından Güneş'in her ay nasıl büyüdüğünü görebilirsin.</p>
+          <p className="text-lg text-gray-500 lg:text-lg dark:text-gray-400">Aynı zamanda kelime sayfasında da Güneş'in ilk kelimelerini ve hangi anlama geldiğini görebilirsin. Bir nevi Güneş Sözlük!</p>
+          <p className="mt-5 text-lg text-gray-500 lg:text-lg dark:text-gray-400">Site henüz geliştirme aşamasında. Önümüzdeki günlerde güncellenerek yeni özellikler eklenecek. Eğer aklında fikir varsa, benimle iletişime geçebilirsin.</p>
+
           </div>
         </div>
          ) : (  <>
@@ -55,10 +53,10 @@ export default function page() {
                       />
                     </div>
                     <div className= "p-4">
-                    <h1 className="h1gradient mb-10 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">Gunesin dunyasina hos geldiniz</h1>
-                    <p className="text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Bu internet sitesi Gunesin internetteki ani defteri olarak tasarlanmistir.</p>
-                    <p className="my-5 text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Bu site uzerinden Gunes'e ileride okuyabilecegi notlar yazabilir, ilk kemilerini ve ne anlama geldigini gosteren sozluge goz atabilir, Gunesin dogumundan beri her ay guncellenen foto galeride gezinebilirsiniz.</p>
-                    <p className="text-lg text-gray-500 lg:text-lg  dark:text-gray-400">Iceriklere erisim aile uyeleri ile sinirlandirilmistir. Devam etmek icin lutfen giris yapin</p>
+                    <h1 className="h1gradient mb-10 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl">Güneş'in dünyasına hoş geldiniz</h1>
+                    <p className="text-lg text-gray-500 lg:text-lg dark:text-gray-400">Bu internet sitesi Güneş'in internetteki anı defteri olarak tasarlanmıştır.</p>
+                    <p className="my-5 text-lg text-gray-500 lg:text-lg dark:text-gray-400">Bu site üzerinden Güneş'e ileride okuyabileceği notlar yazabilir, ilk kelimelerini ve ne anlama geldiğini gösteren sözlüğe göz atabilir, Güneş'in doğumundan beri her ay güncellenen foto galeride gezinebilirsiniz.</p>
+                    <p className="text-lg text-gray-500 lg:text-lg dark:text-gray-400">İçeriklere erişim aile üyeleri ile sınırlıdır. Devam etmek için lütfen giriş yapın.</p>
                     <Link href='/auth/signin'>
                     <div className="bg-gradient-to-br from-[#fdb44b] to-yellow-300  hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 mt-10 flex justify-center mx-auto max-w-[50%] text-cetner items-center p-3 rounded-md text-white">Giris Yap
                     </div>

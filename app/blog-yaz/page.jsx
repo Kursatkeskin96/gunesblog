@@ -1,17 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
-
 import Form from '../../components/Form';
 
 const CreateBlog = () => {
   const router = useRouter();
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
 
   const [submitting, setIsSubmitting] = useState(false);
   const [post, setPost] = useState({ title: "", text: "" });
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      redirect("/");
+    }
+  }, [status]);
 
   const createBlog = async (e) => {
     e.preventDefault();
@@ -24,11 +30,12 @@ const CreateBlog = () => {
           title: post.title,
           userId: session?.user.id,
           text: post.text,
+          creator: post.creator,
         }),
       });
 
       if (response.ok) {
-        router.push("/");
+        router.push("/blog");
       }
     } catch (error) {
       console.log(error);
