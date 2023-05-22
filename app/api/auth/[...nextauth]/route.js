@@ -18,7 +18,7 @@ const handler = NextAuth({
         password: { label: "Password", type: "password", placeholder: "*****" }
       },
       async authorize(credentials, req) {
-        const { username, password } = credentials;
+        const { username } = credentials;
 
         await connectToDB();
 
