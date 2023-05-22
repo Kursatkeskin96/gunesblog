@@ -34,7 +34,7 @@ const handler = NextAuth({
       const comparePass = await bcrypt.compare(password, user.password)
 
       if(!comparePass){
-          throw new Error("Invalid input")
+          throw new Error("Invalid inpuddddddd")
       } else {
           const {password, ...currentUser} = user._doc
 
