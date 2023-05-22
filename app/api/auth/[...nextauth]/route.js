@@ -18,7 +18,7 @@ const handler = NextAuth({
         password: { label: "Password", type: "password", placeholder: "*****" }
       },
       async authorize(credentials, req) {
-        const { username } = credentials;
+        const { username, password } = credentials;
 
         await connectToDB();
 
@@ -48,13 +48,6 @@ const handler = NextAuth({
   }
 })
 ],
-  callbacks: {
-    async session({ session }) {
-      const sessionUser = await User.findOne({ username: session?.user?.username });
-      session?.user && (session.user.id = sessionUser?._id.toString());
-
-      return session;
-    },
      callbacks: {
         async jwt({token, user}){
             if(user){
@@ -73,6 +66,6 @@ const handler = NextAuth({
             return session
         }
     }
-}})
+})
 
 export { handler as GET, handler as POST };
