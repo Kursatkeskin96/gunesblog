@@ -1,6 +1,15 @@
-import React from 'react'
+'use client'
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
 
 export default function Kelime () {
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      redirect("/");
+    }
+  }, [status]);
   return (
     <div className=' bg-slate-100 h-screen'>
 <div className='flex items-center justify-center max-w-[80%] mx-auto pt-10 flex-wrap'>

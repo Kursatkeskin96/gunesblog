@@ -1,4 +1,4 @@
-import React from 'react'
+'use client'
 import gunes1hafta from '@/assets/gunes1hafta.jpg'
 import gunes1ay from '@/assets/gunes1ay.jpg'
 import gunes2ay from '@/assets/gunes2ay.jpg'
@@ -11,8 +11,17 @@ import gunes8ay from '@/assets/gunes8ay.jpg'
 import gunes9ay from '@/assets/gunes9ay.jpg'
 import gunes10ay from '@/assets/gunes10ay.jpg'
 import Image from 'next/image'
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
 
 export default function Galeri() {
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      redirect("/");
+    }
+  }, [status]);
   return (
     <div className="flex items-center max-w-[80%] mx-auto justify-center flex-wrap">
   <div className="group h-44 w-40 [perspective:1000px]">
