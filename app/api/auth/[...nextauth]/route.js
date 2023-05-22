@@ -1,8 +1,10 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
-
+import { signJwtToken } from "@/lib/jwt";
 import { connectToDB } from '../../../../utils/database'
 import User from '../../../../models/user';
+import bcrypt from 'bcrypt'
+
 
 const handler = NextAuth({
   pages: {
@@ -10,23 +12,42 @@ const handler = NextAuth({
   },
   providers: [
     CredentialsProvider({
-      name: "Username",
+      type: 'credentials',
       credentials: {
         username: { label: "Username", type: "text", placeholder: "username" },
         password: { label: "Password", type: "password", placeholder: "*****" }
       },
       async authorize(credentials, req) {
-        const { username } = credentials;
+        const { username, password } = credentials;
+
+        await connectToDB();
+
         const user = await User.findOne({ username });
       
-        if (user) {
-          return user;
-        } else {
-          return null;
-        }
+        if(!user){
+          throw new Error("Invalid input")
       }
-    }) 
-  ],
+
+      // 2 parameters -> 
+      // 1 normal password -> 123123
+      // 2 hashed password -> dasuytfygdsaidsaugydsaudsadsadsauads
+      const comparePass = await bcrypt.compare(password, user.password)
+
+      if(!comparePass){
+          throw new Error("Invalid input")
+      } else {
+          const {password, ...currentUser} = user._doc
+
+          const accessToken = signJwtToken(currentUser, {expiresIn: '6d'})
+
+          return {
+              ...currentUser,
+              accessToken
+          }
+      }
+  }
+})
+],
   callbacks: {
     async session({ session }) {
       const sessionUser = await User.findOne({ username: session?.user?.username });
@@ -34,27 +55,24 @@ const handler = NextAuth({
 
       return session;
     },
-    async signIn({ profile }) {
-      try {
-        await connectToDB();
+     callbacks: {
+        async jwt({token, user}){
+            if(user){
+                token.accessToken = user.accessToken
+                token._id = user._id
+            }
 
-        if (profile?.username) {
-          const userExists = await User.findOne({ username: profile.username });
+            return token
+        },
+        async session({session, token}){
+            if(token){
+                session.user._id = token._id
+                session.user.accessToken = token.accessToken
+            }
 
-          if (!userExists) {
-            await User.create({
-             username: profile.username,
-            });
-          }
+            return session
         }
-
-        return true;
-      } catch (error) {
-        console.log("Error checking if user exists: ", error.message);
-        return false;
-      }
-    },
-  }
-});
+    }
+}})
 
 export { handler as GET, handler as POST };
