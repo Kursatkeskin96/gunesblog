@@ -54,9 +54,11 @@ const Nav = () => {
                   </Link>
                 </div>
                     <div className='mr-8 hover:border-b-2 border-[#fdb44b]'>
-                    <button type='button' onClick={signIn}>
+                      <Link href='/auth/signin'>
+                    <button type='button'>
                       Giriş Yap
                     </button>
+                    </Link>
                   </div>
                 </div>
               ))}

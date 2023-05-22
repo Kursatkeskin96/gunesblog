@@ -19,13 +19,14 @@ export default function Blogpage() {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const response = await fetch('https://gunesozdemir.vercel.app/api/blog');
+      const timestamp = Date.now();
+      const url = `https://gunesozdemir.vercel.app/api/blog?_=${timestamp}`;
+      const response = await fetch(url);
       const data = await response.json();
       setBlogs(data);
     };
-      fetchBlogs();
+    fetchBlogs();
   }, []);
-
   return (
     <div>
       <div className={styles.homebackground}>
