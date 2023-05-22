@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
     });
 
   return (
-   <div className="shadow-lg p-3 w-[70%] mx-auto text-center">
+   <div className="shadow-lg p-3 w-[70%] py-5 mx-auto text-center">
     <div className="indent-5 text-4xl mt-3 text-left">
       {blog.title}
     </div>
