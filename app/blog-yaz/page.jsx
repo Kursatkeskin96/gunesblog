@@ -24,7 +24,7 @@ const CreateBlog = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/blog/new", {
+      const response = await fetch("https://gunesozdemir.vercel.app/api/blog/new", {
         method: "POST",
         body: JSON.stringify({
           title: post.title,
