@@ -33,10 +33,10 @@ const handler = NextAuth({
       // 2 hashed password -> dasuytfygdsaidsaugydsaudsadsadsauads
       const comparePass = await bcrypt.compare(password, user.password)
 
-      if(!comparePass){
-          throw new Error("Invalid inpuddddddd")
-      } else {
-          const {password, ...currentUser} = user._doc
+      if (user.password !== password) {
+        throw new Error("Invalid inpuddddddd")
+    } else {
+        const {password, ...currentUser} = user._doc
 
           const accessToken = signJwtToken(currentUser, {expiresIn: '6d'})
 

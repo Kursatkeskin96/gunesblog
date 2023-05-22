@@ -79,7 +79,7 @@ export const LoginForm = () => {
             value={formValues.username}
             onChange={handleChange}
             placeholder="Kullanıcı adı"
-       
+            className={`${input_style}`}
           />
         </div>
         <div className="mb-6">
@@ -91,7 +91,7 @@ export const LoginForm = () => {
             value={formValues.password}
             onChange={handleChange}
             placeholder="********"
-    
+            className={`${input_style}`}
           />
         </div>
         <button
