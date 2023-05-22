@@ -9,7 +9,7 @@ import gunes3 from '@/assets/guneslogin.jpg'
 export const LoginForm = () => {
   const router = useRouter();
   const [username, setUsername] = useState("")
-  const [password, setPassword] = usestate()
+  const [password, setPassword] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault()
