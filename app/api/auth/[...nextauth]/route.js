@@ -25,7 +25,7 @@ const handler = NextAuth({
         const user = await User.findOne({ username });
       
         if(!user){
-          throw new Error("Invalid input")
+          throw new Error("Invalid inputuser")
       }
 
       // 2 parameters -> 
