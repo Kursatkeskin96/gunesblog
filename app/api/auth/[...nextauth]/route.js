@@ -6,7 +6,7 @@ import User from '../../../../models/user';
 
 const handler = NextAuth({
   pages: {
-    signIn: '/auth/signin',
+    signIn: 'https://gunesozdemir.vercel.app/auth/signin',
   },
   providers: [
     CredentialsProvider({

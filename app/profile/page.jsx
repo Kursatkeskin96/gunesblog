@@ -20,7 +20,7 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/posts`);
+      const response = await fetch(`https://gunesozdemir.vercel.app/api/users/${session?.user.id}/posts`);
       const data = await response.json();
 
       setMyPosts(data);

@@ -19,7 +19,7 @@ export default function Blogpage() {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const response = await fetch('/api/blog');
+      const response = await fetch('https://gunesozdemir.vercel.app/api/blog');
       const data = await response.json();
       setBlogs(data);
     };
