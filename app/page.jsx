@@ -7,15 +7,26 @@ import Gunes2 from '@/assets/gunes2.jpg'
 import Image from "next/image";
 import Footer from "@/components/Footer";
 
+
 export default function page() {
   const { data: session } = useSession();
   const [providers, setProviders] = useState(null);
+  const [home, setHome] = useState([]);
 
   useEffect(() => {
     (async () => {
       const res = await getProviders();
       setProviders(res);
     })();
+  }, []); 
+
+  useEffect(() => {
+    const fetchHome = async () => {
+      const response = await fetch('/api/home');
+      const data = await response.json();
+      setHome(data);
+    };
+      fetchHome();
   }, []);
 
   return (

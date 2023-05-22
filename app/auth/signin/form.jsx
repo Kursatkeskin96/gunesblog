@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import gunes3 from '@/assets/guneslogin.jpg'
-import Footer from "@/components/Footer";
 
 export const LoginForm = () => {
   const router = useRouter();
@@ -38,7 +37,7 @@ export const LoginForm = () => {
       if (!res?.error) {
         router.push(callbackUrl);
       } else {
-        setError("invalid username or password");
+        setError("Hatali kullanici adi veya sifre");
       }
     } catch (error) {
       setLoading(false);
