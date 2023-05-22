@@ -52,9 +52,6 @@ export const LoginForm = () => {
     </div>
     <div className="">
       <form onSubmit={handleSubmit} className="h-[400px] lg:w-[400px] shadow-lg p-10">
-        {error && (
-          <p className="text-center bg-red-300 py-4 mb-6 rounded">{error}</p>
-        )}
         <div className="mb-6">
           <label htmlFor="username">Kullanıcı Adı</label>
           <input
