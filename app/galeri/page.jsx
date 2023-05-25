@@ -23,7 +23,7 @@ export default function Galeri() {
     }
   }, [status]);
   return (
-    <div className="flex items-center max-w-[80%] mx-auto justify-center flex-wrap">
+    <div className="flex items-center max-w-[80%] mx-auto justify-center flex-wrap pt-10">
   <div className="group h-44 w-40 [perspective:1000px]">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
@@ -50,7 +50,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px]">
+  <div className="group h-44 w-40 [perspective:1000px] my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes2ay} alt="gunes" />
@@ -63,7 +63,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px] mx-5">
+  <div className="group h-44 w-40 [perspective:1000px] mx-5 my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes3ay} alt="gunes" />
@@ -76,7 +76,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px]">
+  <div className="group h-44 w-40 [perspective:1000px] my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes4ay} alt="gunes" />
@@ -102,7 +102,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px]">
+  <div className="group h-44 w-40 [perspective:1000px] my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes6ay} alt="gunes" />
@@ -115,7 +115,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px] mx-5">
+  <div className="group h-44 w-40 [perspective:1000px] mx-5 my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes7ay} alt="gunes" />
@@ -128,7 +128,7 @@ export default function Galeri() {
     </div>
   </div>
 
-  <div className="group h-44 w-40 [perspective:1000px]">
+  <div className="group h-44 w-40 [perspective:1000px] my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes8ay} alt="gunes" />
@@ -140,7 +140,7 @@ export default function Galeri() {
       </div>
     </div>
   </div>
-  <div className="group h-44 w-40 [perspective:1000px] mx-5">
+  <div className="group h-44 w-40 [perspective:1000px] mx-5 my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes9ay} alt="gunes" />
@@ -152,7 +152,7 @@ export default function Galeri() {
       </div>
     </div>
   </div>
-  <div className="group h-44 w-40 [perspective:1000px]">
+  <div className="group h-44 w-40 [perspective:1000px] my-10">
     <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
       <div className="absolute inset-0">
         <Image className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40" src={gunes10ay} alt="gunes" />

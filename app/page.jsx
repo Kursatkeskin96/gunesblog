@@ -33,7 +33,7 @@ export default function page() {
     <div>
         {session?.user ? ( 
           <div className="mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center justify-center max-w-6xl mx-auto">
-          <div className="mt-8 max-w-[90%] p-4">
+          <div className="max-w-[90%] p-4">
             <Image
             src={Gunes2}
             className="ml-auto rounded-md"

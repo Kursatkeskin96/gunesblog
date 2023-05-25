@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 import Form from '../../components/Form';
-import { connectToDB } from "@/utils/database";
 
 const CreateBlog = () => {
   const router = useRouter();
