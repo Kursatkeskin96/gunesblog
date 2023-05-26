@@ -43,12 +43,12 @@ export default function Kelime () {
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Var</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 my-4'>
     <h1 className='ml-4 mt-16 text-2xl'>Eva.</h1>
     <hr className='mt-2'></hr>
-    <p className='ml-4 mt-3 italic text-slate-500'>Evet</p>
+    <p className='ml-4 mt-3 italic text-slate-500 mx-8'>Evet</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 mx-8'>
     <h1 className='ml-4 mt-16 text-2xl'>Ge ge.</h1>
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Gel gel</p>
@@ -58,7 +58,7 @@ export default function Kelime () {
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Kurbağ</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 mx-8 my-4'>
     <h1 className='ml-4 mt-16 text-2xl'>Avaba.</h1>
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Araba</p>
@@ -68,7 +68,7 @@ export default function Kelime () {
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Deterjan</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 mx-8'>
     <h1 className='ml-4 mt-16 text-2xl'>Hav hav.</h1>
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Köpek</p>
@@ -78,12 +78,12 @@ export default function Kelime () {
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Anne</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 mx-8'>
     <h1 className='ml-4 mt-16 text-2xl'>Bağ bağ.</h1>
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Baba</p>
   </div>
-  <div className='rounded-xl shadow-xl h-52 w-52'>
+  <div className='rounded-xl shadow-xl h-52 w-52 my-4'>
     <h1 className='ml-4 mt-16 text-2xl'>Baaaam.</h1>
     <hr className='mt-2'></hr>
     <p className='ml-4 mt-3 italic text-slate-500'>Düşmek, zıplamak</p>
